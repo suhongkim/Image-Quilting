@@ -12,7 +12,6 @@ function quilted = texture_quilting(texture, out_scale, patch_size, mode, overla
     pth_size = [p_o_size - ovl_size];                  % patch size 
    
    
-       
     % quilt patches 
     quilted = zeros(out_size); 
     for r = 1 : pth_size(1) : out_size(1)

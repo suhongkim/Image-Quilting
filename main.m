@@ -1,17 +1,17 @@
 clear all; close all;
-% 'apples.png', 'brick.jpg', 'grass.png', 'radishes.jpg', 'random3.png',
-% 'rice.bmp', 'toast.png', 'weave.jpg', 'random.png'
-img_list = {'text.jpg'};% 
-for i = 1:length(img_list)
-    part1(img_list{i}, 0.1, 1/6);
-    part1(img_list{i}, 0.4, 1/6);
-    part1(img_list{i}, 0.8, 1/6);
-    part1(img_list{i}, 0.1, 1/2);
-    part1(img_list{i}, 0.4, 1/2);
-    part1(img_list{i}, 0.8, 1/2); 
-end
+% Experiments
+img_list = {'apples.png', 'brick.jpg', 'grass.png', 'radishes.jpg', 'random3.png','rice.bmp', 'toast.png', 'weave.jpg', 'random.png','text.jpg'};
+% for i = 1:length(img_list)
+%     part1(img_list{i}, 0.1, 1/6);
+%     part1(img_list{i}, 0.4, 1/6);
+%     part1(img_list{i}, 0.8, 1/6);
+%     part1(img_list{i}, 0.1, 1/2);
+%     part1(img_list{i}, 0.4, 1/2);
+%     part1(img_list{i}, 0.8, 1/2); 
+% end
 
-
+part1('grass.png', 0.6, 1/6, [5,5], 0.2); 
+part1('rice.bmp', 0.6, 1/6, [5,5], 0.2); 
 
 % part2('al.jpg', 'rice.bmp'  , 0.5, 3, 0.4);
 % part2('al.jpg', 'toast.png' , 0.5, 3, 0.4);
@@ -31,7 +31,7 @@ end
 
 
 
-% parameter : apple 70,70
+
 %% Part1: Texture Synthesis 
 function part1(image_name, patch_size, overlap_ratio, out_scale, tol_ratio)
     texture = imread(['./textures/',image_name]); 
